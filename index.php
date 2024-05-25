@@ -1,0 +1,120 @@
+<?php
+require $_SERVER['DOCUMENT_ROOT'] . '/login/verify.php';
+?>
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <title>朦胧黎明</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/photo/logo.jpg">
+  <style>
+    body {
+      font: 16px arial, 'Microsoft Yahei', 'Hiragino Sans GB', sans-serif;
+      background-color: #f5f5f5;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      margin: 0;
+      color: #0cbee6;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    .content {
+      width: 50%;
+      background-color: transparent;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .content>div {
+      background-color: transparent;
+      backdrop-filter: blur(10px);
+      padding: 30px;
+    }
+
+    .content dl {
+      color: #2d6a88;
+      line-height: 2.5em;
+      margin-bottom: 2em;
+    }
+
+    .content .button,
+    .content .button1 {
+      width: 12em;
+      height: 3em;
+      margin-top: 20px;
+      padding: 7px;
+      font-weight: bold;
+      text-align: center;
+      color: white;
+      border-radius: 12px;
+      border: none;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+
+    .content .button {
+      background-color: #2d6a88;
+    }
+
+    .content .button1 {
+      background-color: chocolate;
+    }
+
+    .content div div {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .content a {
+      color: #2d6a88;
+      text-decoration: none;
+    }
+
+    .content a:hover {
+      color: #4a90e2;
+    }
+
+    .content .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .content .button-container .button {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+
+<body style="background-image: url(/photo/logo.jpg)">
+  <div class="content">
+    <div>
+      <h1>朦胧黎明</h1>
+      <dl>
+        <div class="button-container">
+          <a href="http://Download.wzhserver.eu.org:55554/" target="_blank"><button class="button">上传，下载文件</button></a>
+          <a href="/mc/"><button class="button">我的世界服务器</button></a>
+          <a href="/xss/"><button class="button">xss通关</button></a>
+          <a href="/message/"><button class="button">聊天栏</button></a>
+          <a href="/mysql/"><button class="button">mysql数据库</button></a>
+        </div>
+      </dl>
+    </div>
+    <a href="./login/logout.php"><button class="button1">注销</button></a>
+  </div>
+</body>
+
+</html>

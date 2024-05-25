@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="/admin/login.js"></script>
+  <meta charset="UTF-8">
+  <title>注册页面</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h1 class="mb-4 text-center">注册页面</h1>
+
+        <!-- 注册表单 -->
+        <form id="registerForm" action="reg.php" method="POST">
+          <div class="mb-3">
+            <label for="username" class="form-label">用户名</label>
+            <input type="text" name="username" class="form-control" id="username" placeholder="请输入用户名">
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">密码</label>
+            <input type="password" name="password" class="form-control" id="password" placeholder="请输入密码">
+          </div>
+          <button type="submit" class="btn btn-primary">注册</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

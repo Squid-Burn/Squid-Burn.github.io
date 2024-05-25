@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <script src="/login/login.js"></script>
+  <meta charset="UTF-8">
+  <title>我的世界服务器</title>
+  <link rel="icon" href="/photo/logo.jpg" type="image/x-icon">
+  <link rel="shortcut icon" href="/photo/logo.jpg" type="image/x-icon">
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin: auto;
+      max-width: 700px;
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 0 5px #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th,
+    td {
+      text-align: center;
+      padding: 10px;
+      border: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    th {
+      background-color: #4a90e2;
+      color: white;
+      text-transform: uppercase;
+    }
+
+    td {
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    tr:nth-child(even) td {
+      background-color: #e3e3e3;
+    }
+
+    tr:hover td {
+      background-color: #4a90e2;
+      color: white;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: #e3e3e3;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 20px;
+      font-size: 16px;
+      color: #4a4a4a;
+    }
+
+    .footer-content a {
+      color: #4a90e2;
+      text-decoration: none;
+    }
+
+    .decor-section {
+      position: absolute;
+      top: -60px;
+      left: -60px;
+      width: calc(100% + 120px);
+      height: calc(100% + 120px);
+      background-color: rgba(0, 0, 0, 0.2);
+      z-index: -1;
+    }
+
+    .decor-section:before,
+    .decor-section:after {
+      content: "";
+      position: absolute;
+      background: #4a90e2;
+      border-radius: 50%;
+    }
+
+    .decor-section:before {
+      width: 200px;
+      height: 200px;
+      top: 100px;
+      left: 100px;
+    }
+
+    .decor-section:after {
+      width: 260px;
+      height: 260px;
+      bottom: 100px;
+      right: 100px;
+    }
+  </style>
+</head>
+
+<body background="/photo/logo.jpg">
+  <table>
+    <thead>
+      <tr>
+        <th>服务器版本</th>
+        <th>地址</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1.19.2</td>
+        <td>1.19.2.mc.wzhserver.eu.org:25351</td>
+      </tr>
+      </tr>
+      <tr>
+        <td>管理网站</td>
+        <td><a href="http://mcsmanager.mc.wzhserver.eu.org:23334">点击进入<a></td>
+      </tr>
+      <tr>
+        <td>PCL下载</td>
+        <td>PCL下载<a href="/mc/Plain Craft Launcher 2.exe">Plain Craft Launcher 2</a></td>
+      </tr>
+    </tbody>
+
+  </table>
+
+  <div class="decor-section"></div>
+  <footer>
+    <div class="footer-content">
+      <div>&copy; 2023 我的世界服务器</div>
+      <div>联系我们：<a href="mailto:squid_burn@163.com">squid_burn@163.com</a></div>
+    </div>
+
+  </footer>
+</body>
+
+</html>

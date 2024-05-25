@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>登录和删除</title>
+    <style>
+        body {
+            font-family: "微软雅黑", sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 150px auto;
+            background-color: #fff;
+            padding: 30px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin: 0 0 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-size: 16px;
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-bottom: 1px solid #ddd;
+            transition: border-bottom-color 0.3s;
+        }
+
+        .form-group input:focus {
+            border-bottom-color: #1e88e5;
+            outline: none;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button-container input[type="submit"] {
+            width: 150px;
+            padding: 10px;
+            background-color: #1e88e5;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button-container input[type="submit"]:hover {
+            background-color: #1976d2;
+        }
+
+        .button-container a {
+            display: block;
+            margin-top: 10px;
+            text-align: center;
+            color: #555;
+            text-decoration: none;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>删除页面</h2>
+        <form method="post" action="delete.php">
+            <div class="form-group">
+                <label for="username">用户名：</label>
+                <input type="text" name="username" id="username" required>
+            </div>
+
+            <div class="button-container">
+                <input type="submit" value="删除">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

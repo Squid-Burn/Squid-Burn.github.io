@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: url(./backgrond.jpg) no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        .container {
+            position: relative;
+            border-radius: 14px;
+            width: 760px;
+            height: 420px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .main_left,
+        .main_right,
+        .way {
+            width: 380px;
+            height: 420px;
+            padding: 50px 30px;
+            position: absolute;
+            text-align: center;
+        }
+
+        h2,
+        label {
+            letter-spacing: 20px;
+            text-indent: 20px;
+        }
+
+        form {
+            padding-top: 25px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            display: inline-block;
+            height: 40px;
+            width: 100%;
+            padding: 7px 8px;
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 25px;
+            width: 160px;
+            height: 40px;
+            letter-spacing: 16px;
+            text-indent: 16px;
+            border-radius: 16px;
+            border: 0;
+            color: #fff;
+            font-size: 16px;
+            background: linear-gradient(to right, #5d9960, #0b5e2e);
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+            color: darkcyan;
+        }
+
+        .active {
+            background-color: #E9E9E9;
+            border-radius: 14px;
+        }
+
+        .main_left {
+            transition: all 0.6s ease-in-out;
+        }
+
+        .other {
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .other a:first-child {
+            margin-left: 0;
+        }
+
+        .other a {
+            margin-left: 35px;
+        }
+
+        .way {
+            position: absolute;
+            left: 50%;
+            transition: all 0.6s ease-in-out;
+        }
+
+        .change_way {
+            margin: 115px 80px 140px;
+            position: relative;
+            white-space: nowrap;
+            border-radius: 14px;
+        }
+
+        .main_right {
+            left: 50%;
+            display: none;
+        }
+
+        .btn_register {
+            margin-bottom: 10px;
+        }
+
+        .pull {
+            left: 0;
+        }
+
+        .dis {
+            display: block;
+        }
+
+        .hid {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main_left active">
+            <h2>登录</h2>
+            <form action="/login/login.php" id="loginForm" method="POST">
+                <input type="text" id="username" name="username" placeholder="账号">
+                <input type="password" name="password" id="password" placeholder=" 请输入密码">
+                <p><a href="#" class="forget_pwd">忘记密码？</a></p>
+                <button class="btn_login">登录</button>
+            </form>
+        </div>
+        <div class="way">
+            <div class="change_way"><button class="click" onclick="dclick(this)">注册</button></div>
+        </div>
+        <div class="main_right active">
+            <h2>注册</h2>
+            <form action="#" class="form_register">
+                <input type="text" placeholder="请输入邮箱">
+                <input type="password" name="" id="" placeholder="请输入密码">
+                <input type="password" name="" id="" placeholder="确认密码">
+                <button class="btn_register">注册</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        var middlePart = document.getElementsByClassName('way')[0];
+        var firstPart = document.getElementsByClassName('main_left')[0];
+        var finalPart = document.getElementsByClassName('main_right')[0];
+
+        function dclick(e) {
+            if (e.textContent == "注册") {
+                middlePart.classList.add('pull');
+                firstPart.classList.add('hid');
+                finalPart.classList.add('dis');
+                e.textContent = "登录";
+            } else {
+                e.textContent = "注册";
+                middlePart.classList.remove('pull');
+                firstPart.classList.remove('hid');
+                finalPart.classList.remove('dis');
+            }
+        }
+    </script>
+</body>
+
+</html>
